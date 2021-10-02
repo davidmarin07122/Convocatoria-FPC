@@ -65,7 +65,6 @@ public class Convocar {
                     
                     System.out.println("Digite el id del jugador");
                     int id = entrada.nextInt();
-                    int encontrado = 0;
                     for (int i=0; i<jugadores.length;i++){
                         if (id == jugadores[i].getId()) {
                         System.out.println(jugadores[i].getNombre());
@@ -74,9 +73,10 @@ public class Convocar {
                         System.out.println(jugadores[i].getPosicion());
                         System.out.println(jugadores[i].getEdad());
                         System.out.println(jugadores[i].getEquipo());
-                        encontrado = 1;
-                        }else if (encontrado == 0 ) {
-                        System.out.println("El id no esta registrado");     
+                        break;
+                        }else{
+                        System.out.println("El id no esta registrado..."); 
+                        break;
                     }
                     
                     }
@@ -99,16 +99,19 @@ public class Convocar {
                         System.out.println("digite la dorsal");
                         jugadores[i].dorsal = entrada.nextInt();
                         
-                        System.out.println("digite la edad");
+                        System.out.println("digite la pisicion");
+                        jugadores[i].posicion = entrada.next();
+                        
+                        System.out.println("digite el edad");
                         jugadores[i].edad = entrada.nextInt();
                         
-                        System.out.println("digite el equipo");
+                        System.out.println("digite la equipo");
                         jugadores[i].equipo = entrada.next();
-                        
-                        System.out.println("digite la posicion");
-                        jugadores[i].posicion = entrada.next();
-
-                           }   
+                        break;
+                           }else{
+                          System.out.println("El id no esta registrado...");
+                          break;
+                      }  
                     }  
                     break;
                     
