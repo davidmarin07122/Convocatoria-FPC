@@ -16,7 +16,7 @@ public class Convocar {
         int opcion;
         boolean salir = false;
         
-        Jugador [] jugadores = new Jugador[5];
+        Jugador [] jugadores = new Jugador[32];
         
         while(!salir){
             System.out.println("Welcomeeeee");
@@ -28,7 +28,7 @@ public class Convocar {
             System.out.println("4. Mostrar toda la convocatoria");
             System.out.println("5. Salir");
             
-            System.out.println("Digite una opcion");
+            System.out.println("DIGITE UNA OPCION...");
             
             opcion = entrada.nextInt();
             
@@ -63,7 +63,7 @@ public class Convocar {
                     
                 case 2:
                     
-                    System.out.println("Digite el id del jugador");
+                    System.out.println("DIGITE EL ID DEL JUGADOR");
                     int id = entrada.nextInt();
                     for (int i=0; i<jugadores.length;i++){
                         if (id == jugadores[i].getId()) {
@@ -85,7 +85,7 @@ public class Convocar {
                     
                 case 3:
                     
-                    System.out.println("Digite el id del jugador a modificar");
+                    System.out.println("DIGITE EL ID DEL JUAGDOR A MODIFICAR");
                     int idSearch = entrada.nextInt();
                     for (int i=0; i<jugadores.length;i++) {
                       if (jugadores[i].id == idSearch) {
@@ -117,15 +117,16 @@ public class Convocar {
                     
                 case 4:
                     
-                    for (int i=0; i<contador;i++){
+                    for (int i=0; i<jugadores.length;i++){
                         
+                        System.out.println("JUGADORES CONVOCADOS");
                         System.out.println(jugadores[i].getNombre());
                         System.out.println(jugadores[i].getApellido());
                         System.out.println(jugadores[i].getDorsal());
                         System.out.println(jugadores[i].getPosicion());
                         System.out.println(jugadores[i].getEdad());
                         System.out.println(jugadores[i].getEquipo());
-                        
+                        break;
                     
                     }
                     break;
